@@ -118,6 +118,3 @@ neu create app_name
 cd app_name
 neu run
 ```
-
-```
-```
