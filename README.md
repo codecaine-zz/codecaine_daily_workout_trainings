@@ -53,3 +53,29 @@ Or run a packaged binary from `./bin/` (mac example):
 - Cmd+Q on macOS has been wired to call `Neutralino.app.exit()` from `resources/js/main.js`.
 
 If you want additional documentation or packaging instructions, tell me which platform to target.
+
+## Install NeutralinoJS (bun / npm)
+
+You can add the Neutralino.js client library to your project using `bun` or `npm`.
+
+- **With `bun` (recommended if you use Bun):**
+
+```bash
+bun add neutralinojs
+```
+
+- **With `npm`:**
+
+```bash
+npm install neutralinojs --save
+# or, to install globally (not usually necessary for apps):
+npm install -g neutralinojs
+```
+
+Quick usage examples:
+
+```js
+neu create app_name
+cd app_name
+neu run
+```
