@@ -1,4 +1,6 @@
+Here is the updated Markdown file with the new **Build & Release** section included.
 
+````markdown
 # codecaine_daily_workout_trainings
 
 Neutralino.js desktop app — loads [CodeFreelance](https://www.codefreelance.net) as the main page.
@@ -26,13 +28,13 @@ After you clone or download the repository run the following once to download th
 ```bash
 neu update
 neu run
-```
+````
 
 ## Run (development)
 
 Requirements:
 
-- Neutralino CLI (`neu`) installed — see the [Neutralino.js docs](https://neutralino.js.org/).
+  - Neutralino CLI (`neu`) installed — see the [Neutralino.js docs](https://neutralino.js.org/).
 
 From the project root you can start the app during development with:
 
@@ -46,11 +48,44 @@ Or run a packaged binary from `./bin/` (mac example):
 ./bin/neutralino-mac_universal
 ```
 
+## Build & Release (create binaries)
+
+To create standalone binaries for Linux, Windows, and macOS (including Apple Silicon/ARM), run the build command. This processes your resources and packages them with the Neutralino binaries.
+
+**1. Build binaries:**
+This creates the executables in the `dist/` folder.
+
+```bash
+neu build
+```
+
+**2. Build release (optional):**
+To create a finalized `.zip` file for distribution, use the release flag. This is useful for sharing the app.
+
+```bash
+neu build --release
+```
+
+**Output location:**
+After running the build, check the `./dist/` directory. You will typically find:
+
+  - **macOS:** `dist/codecaine_daily_workout_trainings/codecaine_daily_workout_trainings-mac_universal`
+  - **Linux:** `dist/codecaine_daily_workout_trainings/codecaine_daily_workout_trainings-linux_x64`
+  - **Windows:** `dist/codecaine_daily_workout_trainings/codecaine_daily_workout_trainings-win_x64.exe`
+
+**Testing the macOS binary:**
+You can run the newly built Mac binary directly from your terminal:
+
+```bash
+# Adjust the path if your project name differs in neutralino.config.json
+./dist/codecaine_daily_workout_trainings/codecaine_daily_workout_trainings-mac_universal
+```
+
 ## Notes
 
-- The app is configured to open the external URL [https://www.codefreelance.net](https://www.codefreelance.net) on startup (`neutralino.config.json`).
-- A fallback `meta` refresh was added to `resources/index.html` so if the local page is served it redirects to the external site.
-- Cmd+Q on macOS has been wired to call `Neutralino.app.exit()` from `resources/js/main.js`.
+  - The app is configured to open the external URL [https://www.codefreelance.net](https://www.codefreelance.net) on startup (`neutralino.config.json`).
+  - A fallback `meta` refresh was added to `resources/index.html` so if the local page is served it redirects to the external site.
+  - Cmd+Q on macOS has been wired to call `Neutralino.app.exit()` from `resources/js/main.js`.
 
 If you want additional documentation or packaging instructions, tell me which platform to target.
 
@@ -58,13 +93,17 @@ If you want additional documentation or packaging instructions, tell me which pl
 
 You can add the Neutralino.js client library to your project using `bun` or `npm`.
 
-- **With `bun` (recommended if you use Bun):**
+  - **With `bun` (recommended if you use Bun):**
+
+<!-- end list -->
 
 ```bash
 bun add neutralinojs
 ```
 
-- **With `npm`:**
+  - **With `npm`:**
+
+<!-- end list -->
 
 ```bash
 npm install neutralinojs --save
@@ -78,4 +117,7 @@ Quick usage examples:
 neu create app_name
 cd app_name
 neu run
+```
+
+```
 ```
