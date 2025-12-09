@@ -1,6 +1,3 @@
-Here is the updated Markdown file with the new **Build & Release** section included.
-
-````markdown
 # codecaine_daily_workout_trainings
 
 Neutralino.js desktop app — loads [CodeFreelance](https://www.codefreelance.net) as the main page.
@@ -18,8 +15,8 @@ I'm 44 and into advanced fitness — I work out with a mix of calisthenics, gymn
 
 ## Screenshots
 
-![App screenshot](screenshots/screenshot1.png)
-![App screenshot](screenshots/screenshot2.png)
+![App screenshot](./screenshots/screenshot1.png)
+![App screenshot](./screenshots/screenshot2.png)
 
 ## Initial setup (first download)
 
